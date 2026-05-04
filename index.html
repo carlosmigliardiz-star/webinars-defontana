@@ -20,7 +20,36 @@
     --gray-light: #F4F4F4;
     --border: #DADEE7;
     --white: #FFFFFF;
-    --radius: 16px;
+  
+  /* ─── CATEGORY COLORS ─── */
+  --cat-pos-bg: #EFF6FF;
+  --cat-pos-text: #1D4ED8;
+  --cat-pos-accent: #2563EB;
+  --cat-inventario-bg: #FFF7ED;
+  --cat-inventario-text: #C2410C;
+  --cat-inventario-accent: #EA580C;
+  --cat-pagos-bg: #F0FDF4;
+  --cat-pagos-text: #15803D;
+  --cat-pagos-accent: #16A34A;
+  --cat-contabilidad-bg: #F5F3FF;
+  --cat-contabilidad-text: #6D28D9;
+  --cat-contabilidad-accent: #7C3AED;
+  --cat-rrhh-bg: #F0FDF4;
+  --cat-rrhh-text: #15803D;
+  --cat-rrhh-accent: #16A34A;
+  --cat-tesoreria-bg: #FFFBEB;
+  --cat-tesoreria-text: #B45309;
+  --cat-tesoreria-accent: #D97706;
+  --cat-facturación-bg: #FFF1EC;
+  --cat-facturación-text: #C2410C;
+  --cat-facturación-accent: #FF5100;
+  --cat-ventas-bg: #FDF4FF;
+  --cat-ventas-text: #9333EA;
+  --cat-ventas-accent: #A855F7;
+  --cat-documentos-bg: #F8FAFC;
+  --cat-documentos-text: #475569;
+  --cat-documentos-accent: #64748B;
+  --radius: 16px;
     --shadow: 0 4px 24px rgba(255,81,0,0.12);
     --shadow-card: 0 2px 12px rgba(78,78,78,0.10);
   }
@@ -663,6 +692,70 @@
   .footer-logo span { color: var(--orange); }
   .footer-text { font-size: 13px; color: var(--gray); }
 
+
+  /* ─── CATEGORY TAG STYLES ─── */
+  .tag-pos { background: #EFF6FF; color: #1D4ED8; border-color: #2563EB22; }
+  .top-pos { background: linear-gradient(135deg, #2563EB 0%, #60A5FA 100%); }
+  .tag-inventario { background: #FFF7ED; color: #C2410C; border-color: #EA580C22; }
+  .top-inventario { background: linear-gradient(135deg, #EA580C 0%, #FB923C 100%); }
+  .tag-pagos { background: #F0FDF4; color: #15803D; border-color: #16A34A22; }
+  .top-pagos { background: linear-gradient(135deg, #16A34A 0%, #4ADE80 100%); }
+  .tag-contabilidad { background: #F5F3FF; color: #6D28D9; border-color: #7C3AED22; }
+  .top-contabilidad { background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%); }
+  .tag-rrhh { background: #F0FDF4; color: #15803D; border-color: #16A34A22; }
+  .top-rrhh { background: linear-gradient(135deg, #16A34A 0%, #4ADE80 100%); }
+  .tag-tesoreria { background: #FFFBEB; color: #B45309; border-color: #D9770622; }
+  .top-tesoreria { background: linear-gradient(135deg, #D97706 0%, #FCD34D 100%); }
+  .tag-facturación { background: #FFF1EC; color: #C2410C; border-color: #FF510022; }
+  .top-facturación { background: linear-gradient(135deg, #FF5100 0%, #FF7235 100%); }
+  .tag-ventas { background: #FDF4FF; color: #9333EA; border-color: #A855F722; }
+  .top-ventas { background: linear-gradient(135deg, #A855F7 0%, #D8B4FE 100%); }
+  .tag-documentos { background: #F8FAFC; color: #475569; border-color: #64748B22; }
+  .top-documentos { background: linear-gradient(135deg, #64748B 0%, #94A3B8 100%); }
+
+
+  /* ─── CATEGORY TAG & TOP STYLES ─── */
+  .tag-pos { background: #EFF6FF !important; color: #1D4ED8 !important; border-color: #93C5FD !important; }
+  .top-pos { background: linear-gradient(135deg, #2563EB 0%, #60A5FA 100%) !important; }
+  .tag-inventario { background: #FFF7ED !important; color: #C2410C !important; border-color: #FDB093 !important; }
+  .top-inventario { background: linear-gradient(135deg, #EA580C 0%, #FB923C 100%) !important; }
+  .tag-pagos { background: #FFF1EC !important; color: #C2410C !important; border-color: #FFB599 !important; }
+  .top-pagos { background: linear-gradient(135deg, #FF5100 0%, #FF7235 100%) !important; }
+  .tag-contabilidad { background: #F5F3FF !important; color: #6D28D9 !important; border-color: #C4B5FD !important; }
+  .top-contabilidad { background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%) !important; }
+  .tag-rrhh { background: #F0FDF4 !important; color: #15803D !important; border-color: #86EFAC !important; }
+  .top-rrhh { background: linear-gradient(135deg, #16A34A 0%, #4ADE80 100%) !important; }
+  .tag-tesoreria { background: #FFFBEB !important; color: #B45309 !important; border-color: #FCD34D !important; }
+  .top-tesoreria { background: linear-gradient(135deg, #D97706 0%, #FCD34D 100%) !important; }
+  .tag-facturacion { background: #FFF1EC !important; color: #C2410C !important; border-color: #FFB599 !important; }
+  .top-facturacion { background: linear-gradient(135deg, #FF5100 0%, #FF7235 100%) !important; }
+  .tag-ventas { background: #FDF4FF !important; color: #7E22CE !important; border-color: #D8B4FE !important; }
+  .top-ventas { background: linear-gradient(135deg, #9333EA 0%, #D8B4FE 100%) !important; }
+  .tag-documentos { background: #F8FAFC !important; color: #475569 !important; border-color: #CBD5E1 !important; }
+  .top-documentos { background: linear-gradient(135deg, #64748B 0%, #94A3B8 100%) !important; }
+
+
+  /* ─── ONBOARDING CARD COLORS ─── */
+  .ob-card-pos      { background: rgba(37,99,235,0.18) !important; border-color: rgba(37,99,235,0.4) !important; }
+  .ob-card-pos .ob-card-day   { color: #BFDBFE !important; }
+  .ob-card-pos .ob-card-title { color: #FFFFFF !important; }
+  .ob-card-pos .ob-card-hour  { color: rgba(191,219,254,0.8) !important; }
+
+  .ob-card-erp      { background: rgba(255,81,0,0.18) !important; border-color: rgba(255,81,0,0.4) !important; }
+  .ob-card-erp .ob-card-day   { color: #FFD0BA !important; }
+  .ob-card-erp .ob-card-title { color: #FFFFFF !important; }
+  .ob-card-erp .ob-card-hour  { color: rgba(255,208,186,0.8) !important; }
+
+  .ob-card-contabilidad { background: rgba(124,58,237,0.18) !important; border-color: rgba(124,58,237,0.4) !important; }
+  .ob-card-contabilidad .ob-card-day   { color: #DDD6FE !important; }
+  .ob-card-contabilidad .ob-card-title { color: #FFFFFF !important; }
+  .ob-card-contabilidad .ob-card-hour  { color: rgba(221,214,254,0.8) !important; }
+
+  .ob-card-personas { background: rgba(22,163,74,0.18) !important; border-color: rgba(22,163,74,0.4) !important; }
+  .ob-card-personas .ob-card-day   { color: #BBF7D0 !important; }
+  .ob-card-personas .ob-card-title { color: #FFFFFF !important; }
+  .ob-card-personas .ob-card-hour  { color: rgba(187,247,208,0.8) !important; }
+
   /* ─── HIDE/SHOW filters ─── */
   .month-section { transition: opacity .2s; }
   .month-section.hidden { display: none; }
@@ -786,7 +879,7 @@
         <span class="card-featured-badge">⭐ Webinar destacado</span>
       </div>
       <div class="card-featured-body">
-        <div class="card-tag">
+        <div class="card-tag tag-facturacion">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
           Facturación
         </div>
@@ -833,10 +926,10 @@
 
       <!-- 6 mayo -->
       <div class="card" style="animation-delay:.05s">
-        <div class="card-top">
+        <div class="card-top top-pos">
           <div class="card-top-accent"></div>
           <div class="card-top-emoji">🛒</div>
-          <div class="card-tag" style="margin-bottom:0">POS</div>
+          <div class="card-tag tag-pos" style="margin-bottom:0">POS</div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Opera tu punto de venta con control total</h3>
@@ -862,10 +955,10 @@
 
       <!-- 8 mayo -->
       <div class="card" style="animation-delay:.10s">
-        <div class="card-top">
+        <div class="card-top top-inventario">
           <div class="card-top-accent"></div>
           <div class="card-top-emoji">📦</div>
-          <div class="card-tag" style="margin-bottom:0">Inventario</div>
+          <div class="card-tag tag-inventario" style="margin-bottom:0">Inventario</div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Controla tu inventario en tiempo real</h3>
@@ -891,10 +984,10 @@
 
       <!-- 13 mayo -->
       <div class="card" style="animation-delay:.15s">
-        <div class="card-top">
+        <div class="card-top top-pagos">
           <div class="card-top-accent"></div>
           <div class="card-top-emoji">💳</div>
-          <div class="card-tag" style="margin-bottom:0">Pagos</div>
+          <div class="card-tag tag-pagos" style="margin-bottom:0">Pagos</div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Gestiona tus pagos y renovaciones</h3>
@@ -920,10 +1013,10 @@
 
       <!-- 14 mayo -->
       <div class="card" style="animation-delay:.20s">
-        <div class="card-top">
+        <div class="card-top top-contabilidad">
           <div class="card-top-accent"></div>
           <div class="card-top-emoji">🧠</div>
-          <div class="card-tag" style="margin-bottom:0">Contabilidad</div>
+          <div class="card-tag tag-contabilidad" style="margin-bottom:0">Contabilidad</div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Domina tu flujo de compras y contabilidad</h3>
@@ -949,10 +1042,10 @@
 
       <!-- 20 mayo -->
       <div class="card" style="animation-delay:.25s">
-        <div class="card-top">
+        <div class="card-top top-rrhh">
           <div class="card-top-accent"></div>
           <div class="card-top-emoji">👥</div>
-          <div class="card-tag" style="margin-bottom:0">RR.HH.</div>
+          <div class="card-tag tag-rrhh" style="margin-bottom:0">RR.HH.</div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Módulo de contratación</h3>
@@ -978,10 +1071,10 @@
 
       <!-- 26 mayo -->
       <div class="card" style="animation-delay:.30s">
-        <div class="card-top">
+        <div class="card-top top-tesoreria">
           <div class="card-top-accent"></div>
           <div class="card-top-emoji">🏦</div>
-          <div class="card-tag" style="margin-bottom:0">Tesorería</div>
+          <div class="card-tag tag-tesoreria" style="margin-bottom:0">Tesorería</div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Tesorería: ingresos, egresos y pagos electrónicos</h3>
@@ -1007,10 +1100,10 @@
 
       <!-- 28 mayo -->
       <div class="card" style="animation-delay:.35s">
-        <div class="card-top">
+        <div class="card-top top-rrhh">
           <div class="card-top-accent"></div>
           <div class="card-top-emoji">💼</div>
-          <div class="card-tag" style="margin-bottom:0">RR.HH.</div>
+          <div class="card-tag tag-rrhh" style="margin-bottom:0">RR.HH.</div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Gestiona tus liquidaciones con confianza</h3>
@@ -1049,10 +1142,10 @@
 
       <!-- 1 junio -->
       <div class="card" style="animation-delay:.05s">
-        <div class="card-top">
+        <div class="card-top top-ventas">
           <div class="card-top-accent"></div>
           <div class="card-top-emoji">🛍</div>
-          <div class="card-tag" style="margin-bottom:0">Ventas</div>
+          <div class="card-tag tag-ventas" style="margin-bottom:0">Ventas</div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Actualización módulo de Ventas — Módulo Nova</h3>
@@ -1078,10 +1171,10 @@
 
       <!-- 11 junio -->
       <div class="card" style="animation-delay:.10s">
-        <div class="card-top">
+        <div class="card-top top-documentos">
           <div class="card-top-accent"></div>
           <div class="card-top-emoji">📄</div>
-          <div class="card-tag" style="margin-bottom:0">Documentos</div>
+          <div class="card-tag tag-documentos" style="margin-bottom:0">Documentos</div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Gestor documental</h3>
@@ -1107,10 +1200,10 @@
 
       <!-- 18 junio -->
       <div class="card" style="animation-delay:.15s">
-        <div class="card-top">
+        <div class="card-top top-ventas">
           <div class="card-top-accent"></div>
           <div class="card-top-emoji">📥</div>
-          <div class="card-tag" style="margin-bottom:0">Ventas</div>
+          <div class="card-tag tag-ventas" style="margin-bottom:0">Ventas</div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Importador de Ventas</h3>
@@ -1145,7 +1238,7 @@
     <h3 class="ob-title">Academia Defontana en Vivo — Onboarding semanal</h3>
     <p class="ob-sub">Sesiones de onboarding gratuitas todos los días de la semana para que puedas empezar con Defontana desde cero. Con cupo limitado — reserva tu lugar con anticipación.</p>
     <div class="ob-grid">
-      <div class="ob-card">
+      <div class="ob-card ob-card-pos">
         <div class="ob-card-day">Todos los Lunes · Miércoles · Viernes</div>
         <div class="ob-card-title">Onboarding POS</div>
         <div class="ob-card-hour">Lun 09:00 · Mié 11:00 · Vie 15:00 hrs</div>
@@ -1153,7 +1246,7 @@
           Reservar cupo →
         </a>
       </div>
-      <div class="ob-card">
+      <div class="ob-card ob-card-erp">
         <div class="ob-card-day">Todos los Martes · Jueves</div>
         <div class="ob-card-title">Onboarding ERP</div>
         <div class="ob-card-hour">Mar 10:00 · Jue 15:00 hrs</div>
@@ -1161,7 +1254,7 @@
           Reservar cupo →
         </a>
       </div>
-      <div class="ob-card">
+      <div class="ob-card ob-card-contabilidad">
         <div class="ob-card-day">Todos los Miércoles</div>
         <div class="ob-card-title">Onboarding Contabilidad</div>
         <div class="ob-card-hour">15:00 hrs</div>
@@ -1169,7 +1262,7 @@
           Reservar cupo →
         </a>
       </div>
-      <div class="ob-card">
+      <div class="ob-card ob-card-personas">
         <div class="ob-card-day">Todos los Viernes</div>
         <div class="ob-card-title">Onboarding Gestión de Personas</div>
         <div class="ob-card-hour">11:00 hrs</div>
