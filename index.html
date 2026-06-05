@@ -1966,6 +1966,58 @@
     triggerReveal();
   }
 
+
+  /* ─── OCULTAR WEBINARS PASADOS ─── */
+  (function() {
+    const meses = {
+      'Ene': 0, 'Feb': 1, 'Mar': 2, 'Abr': 3, 'May': 4, 'Jun': 5,
+      'Jul': 6, 'Ago': 7, 'Sep': 8, 'Oct': 9, 'Nov': 10, 'Dic': 11
+    };
+
+    function parseFecha(texto) {
+      // Formato: "29 Abr · 11:00 hrs" o "6 May · 11:00 hrs"
+      const m = texto.match(/(\d{1,2})\s+([A-Za-záéíóú]{3})/);
+      if (!m) return null;
+      const dia = parseInt(m[1]);
+      const mes = meses[m[2].substring(0,3).charAt(0).toUpperCase() + m[2].substring(1,3).toLowerCase()];
+      if (mes === undefined) return null;
+      const anio = 2026;
+      return new Date(anio, mes, dia);
+    }
+
+    const hoy = new Date();
+    hoy.setHours(0, 0, 0, 0);
+
+    document.querySelectorAll('.wcard[data-cat]').forEach(function(card) {
+      // Buscar el span con el ícono de calendario (segundo wcard-meta-item)
+      const metaItems = card.querySelectorAll('.wcard-meta-item');
+      let fechaTexto = null;
+      metaItems.forEach(function(item) {
+        const txt = item.textContent.trim();
+        // El que tiene formato "DD Mes · HH:MM hrs"
+        if (/\d{1,2}\s+[A-Za-z]{3}/.test(txt)) {
+          fechaTexto = txt;
+        }
+      });
+      if (!fechaTexto) return;
+      const fecha = parseFecha(fechaTexto);
+      if (!fecha) return;
+      if (fecha < hoy) {
+        card.style.display = 'none';
+      }
+    });
+
+    // Ocultar grupos que queden vacíos
+    ['cat-erp','cat-pos','cat-contabilidad','cat-personas'].forEach(function(id) {
+      const grupo = document.getElementById(id);
+      if (!grupo) return;
+      const visibles = grupo.querySelectorAll('.wcard[data-cat]:not([style*="display: none"])');
+      if (visibles.length === 0) {
+        grupo.style.display = 'none';
+      }
+    });
+  })();
+
   /* ─── TAB SWITCHING ─── */
   function switchTab(name) {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
